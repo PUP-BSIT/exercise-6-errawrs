@@ -262,16 +262,15 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .comment-box,
-  .comment-item {
-    width: 100%;
-    padding: 0px;
-  }
-
   .teammate-comment {
     width: 90%;
     gap: 10px;
     margin: auto;
+  }
+
+  .comment-box,
+  .comment-item {
+    width: 100%;
   }
 }
 
@@ -297,16 +296,13 @@ button {
   }
 
   .teammate-comment {
-    width: 100%;
-    margin: auto;
+    width: 90%;
   }
 
   .comment-box,
   .comment-item {
     width: 90%;
   }
-
-  
 }
 
 /* Mobile L */
@@ -330,15 +326,13 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .comment-box,
-  .comment-item {
-    width: 90%;
-    padding: 0px;
-  }
-
   .teammate-comment {
     width: 90%;
     gap: 15px;
   }
 
+  .comment-box,
+  .comment-item {
+    width: 90%;
+  }
 }
