@@ -13,7 +13,6 @@ form.addEventListener("input", validateForm);
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   if (!submitButton.disabled) {
-    alert("Form submitted successfully!");
     form.reset();
     validateForm();
   }
