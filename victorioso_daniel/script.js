@@ -2,6 +2,8 @@ let inputName = document.getElementById("comment_name");
 let inputComment = document.getElementById("comment_box");
 let commentBtn = document.getElementById("comment_btn");
 
+commentBtn.classList.add("disabled");
+
 function checkRequirements() {
   if (inputName.value.trim() !== "" && inputComment.value.trim() !== "") {
     commentBtn.disabled = false;
