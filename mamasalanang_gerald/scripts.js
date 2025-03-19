@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const commentNameInput = document.getElementById("comment-name");
-  const goalCommentInput = document.getElementById("goal-comment");
-  const commentBtn = document.getElementById("comment-btn");
+  let commentNameInput = document.getElementById("comment-name");
+  let goalCommentInput = document.getElementById("goal-comment");
+  let commentBtn = document.getElementById("comment-btn");
 
   function validateCommentForm() {
     if (
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   commentNameInput.addEventListener("input", validateCommentForm);
   goalCommentInput.addEventListener("input", validateCommentForm);
 
-  const goalCommentForm = document.querySelector(".goal-comment-form");
+  let goalCommentForm = document.querySelector(".goal-comment-form");
   goalCommentForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
