@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let commentNameInput = document.getElementById("comment-name");
-  let goalCommentInput = document.getElementById("goal-comment");
-  let commentBtn = document.getElementById("comment-btn");
+  let commentNameInput = document.getElementById("comment_name");
+  let goalCommentInput = document.getElementById("goal_comment");
+  let commentBtn = document.getElementById("comment_button");
 
   function validateCommentForm() {
     if (
