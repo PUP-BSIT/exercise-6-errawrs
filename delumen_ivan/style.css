@@ -19,9 +19,9 @@ h2 {
 
 body {
   margin: 0px;
-  background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(0,0,0,1) 0%, 
   rgba(255,0,0,1) 100%);
+  box-sizing: border-box;
 }
 
 .hobbies-section {
@@ -158,6 +158,89 @@ body {
   color: blue;
 }
 
+.goals-section {
+  max-width: 800px;
+  margin: auto;
+  padding: 5px 30px 25px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.45);
+  box-sizing: border-box;
+}
+
+.goals-container {
+  background-color: red;
+  border-radius: 10px;
+  padding: 10px
+}
+
+.comment-section {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 15px 20px 15px;
+}
+
+.goal-item {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 15px;
+  border-radius: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: red;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: auto;
+}
+
+.goal-item {
+  padding: 5px;
+}
+
+.goal-item p {
+  font-size: 20px;
+}
+
+.teammate-comment {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.comment-item {
+  width: 200px;
+  background-color: red;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
 /* Mobile S */
 @media (max-width: 320px) {
   h1 {
@@ -169,17 +252,26 @@ body {
   .works-container,
   .testimonials-container,
   .gallery-container,
-  .contact-container {
+  .contact-container,
+  .goals-container {
     width: 90%;
     padding: 10px;
   }
   
   .img-container {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr;
   }
 
-  .comment-box {
+  .comment-box,
+  .comment-item {
     width: 100%;
+    padding: 0px;
+  }
+
+  .teammate-comment {
+    width: 90%;
+    gap: 10px;
+    margin: auto;
   }
 }
 
@@ -194,18 +286,27 @@ body {
   .works-container,
   .testimonials-container,
   .gallery-container,
-  .contact-container {
+  .contact-container,
+  .goals-container {
     width: 90%;
     padding: 12px;
   }
 
   .img-container {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr;
   }
 
-  .comment-box {
+  .teammate-comment {
     width: 100%;
+    margin: auto;
   }
+
+  .comment-box,
+  .comment-item {
+    width: 90%;
+  }
+
+  
 }
 
 /* Mobile L */
@@ -219,16 +320,25 @@ body {
   .works-container,
   .testimonials-container,
   .gallery-container,
-  .contact-container {
+  .contact-container,
+  .goals-container {
     width: 90%;
     padding: 15px;
   }
 
   .img-container {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr;
   }
 
-  .comment-box {
+  .comment-box,
+  .comment-item {
     width: 90%;
+    padding: 0px;
   }
+
+  .teammate-comment {
+    width: 90%;
+    gap: 15px;
+  }
+
 }
