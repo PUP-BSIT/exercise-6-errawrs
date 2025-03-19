@@ -6,11 +6,16 @@
     <title>Victorioso Daniel Page</title>
     <link rel="icon" type="image/png" href="./assets/img/profile_dan.png" />
     <link rel="stylesheet" href="styles.css" />
+    >
   </head>
 
   <body>
     <div class="nav-container">
-      <nav>
+      <input type="checkbox" id="menu_toggle_checkbox" />
+      <label for="menu_toggle_checkbox" class="menu-toggle"> Menu </label>
+      <div class="menu-overlay"></div>
+
+      <nav class="side-menu">
         <ul class="nav-list">
           <li><a href="#home_section">Home</a></li>
           <li><a href="#interests_section">Interests and Hobbies</a></li>
@@ -138,7 +143,7 @@
           </div>
         </div>
         <div class="comment-section">
-          <hr>
+          <hr />
           <h3>Comments</h3>
           <div class="comment-box">
             <p>

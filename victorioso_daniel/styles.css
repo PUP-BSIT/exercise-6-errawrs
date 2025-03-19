@@ -26,6 +26,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Navigation Section */
 .nav-container {
   background: linear-gradient(
     to right,
@@ -37,30 +38,100 @@ body {
   top: 0;
   z-index: 1;
   width: 100%;
+  height: 12%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--primary-color);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 70px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-list {
-  display: flex;
-  justify-content: center;
   list-style: none;
-  gap: 20px;
-  padding: 0 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-bottom: 15px;
 }
 
 .nav-list a {
-  color: var(--secondary-color);
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  padding: 5px 10px;
-  transition: all 0.3s ease;
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
 }
 
 .nav-list a:hover {
-  color: var(--highlight-color);
-  transform: translateY(-2px);
+  background-color: var(--accent-color);
 }
 
+/* Menu */
+.menu-toggle {
+  color: white;
+  background-color: var(--accent-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  margin-left: 20px;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 40px;
+}
+
+#menu_toggle_checkbox {
+  display: none;
+}
+
+#menu_toggle_checkbox:checked ~ .side-menu {
+  left: 0;
+}
+
+#menu_toggle_checkbox:checked ~ .menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Menu overlay */
+.menu-overlay {
+  display: none;
+}
+
+#menu_toggle_checkbox:checked ~ .menu-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Main Section */
 .main-wrapper {
   max-width: 1000px;
   margin: 0 auto;
@@ -105,6 +176,7 @@ h2::after {
   background-color: var(--highlight-color);
 }
 
+/* Home Section */
 #home_section {
   text-align: center;
 }
@@ -125,6 +197,7 @@ h2::after {
   object-fit: cover;
 }
 
+/* Interests Section */
 .interests-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -367,6 +440,22 @@ h2::after {
   );
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Comment button styles */
+#comment_btn.disabled {
+  background: linear-gradient(to right, rgb(177, 68, 68), #882929);
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+#comment_btn.enabled {
+  background: linear-gradient(
+    to right,
+    var(--accent-color),
+    var(--primary-color)
+  );
+  opacity: 1;
 }
 
 img {
