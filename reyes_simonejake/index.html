@@ -3,22 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="./assets/playfair.ttf"
-      rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="./assets/fontawesome/css/all.min.css"/>
+    <link href="./assets/playfair.ttf" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Reyes Simone Jake</title>
     <link
-      rel="icon"
-      type="image/png"
-      href="./images/simone-reye-program_analyst.jpg" />
+      rel="icon" type="image/png"
+      href="./images/simone-reye-program_analyst.jpg"/>
   </head>
   <body>
     <div class="nav-bar">
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <input type="checkbox" id="nav_toggle" class="nav-toggle" />
       <label for="nav-toggle" class="hamburger-menu">
         <i class="fas fa-bars"></i>
       </label>
@@ -27,6 +22,7 @@
           <li><a href="#home_section">Home</a></li>
           <li><a href="#interest_section">Interest</a></li>
           <li><a href="#works_section">Works</a></li>
+          <li><a href="#goals_section">Goals</a></li>
           <li><a href="#testimonial_section">Testimonial</a></li>
           <li><a href="#gallery_section">Gallery</a></li>
           <li><a href="#contact_section">Contact</a></li>
@@ -40,26 +36,25 @@
         <img src="./images/pogi.jpg" alt="simone reyes" />
         <h1>Simone Jake Reyes</h1>
       </div>
-
       <h2>
-        Code with Purpose <br />Debug with Patience<br />
-        Create with Passion
+        <span>Code with Purpose</span>
+        <span>Debug with Patience</span>
+        <span>Create with Passion</span>
       </h2>
       <p>
         Someday, I aspire to become a successful Full Stack Web Developer
-        <br />and establish my own startup company.
+        <span>and establish my own startup company.</span>
       </p>
       <div class="button">
         <button class="btn-light">
           <a href="#contact_section">Let's Connect</a>
         </button>
         <button class="btn-black">
-          <a href="https://calendly.com/reyesjake262/30min"
-            >Book a Consultation</a>
+          <a href="https://calendly.com/reyesjake262/30min">Book a Consultation
+          </a>
         </button>
       </div>
     </div>
-
     <!--Interest Section-->
     <div id="interest_section">
       <h2>My Interest and Hobbies</h2>
@@ -149,6 +144,102 @@
       </div>
     </div>
 
+    <!---Goals Section-->
+    <div class="goals-section" id="goals_section">
+      <h2>My Goals</h2>
+      <div class="goal-container">
+        <div class="goal">
+          <h3>Finish My College Degree 🎓</h3>
+          <p>
+            Education is my foundation. Completing my Diploma in Information
+            Technology at PUP Taguig is not just about earning a degree it’s
+            about proving to myself and my family that I can accomplish great
+            things. I know that finishing my studies will open doors to better
+            opportunities, allowing me to build the career I’ve always wanted.
+          </p>
+        </div>
+        <div class="goal">
+          <h3>Become a Software Engineer 💻</h3>
+          <p>
+            Technology is my passion, and coding is my craft. My goal is to
+            become a skilled software engineer, someone who builds innovative
+            solutions and contributes to the digital world. I want to master
+            multiple programming languages, work on real-world projects, and
+            continuously improve my problem-solving skills. This career is not
+            just a job for me, it’s my dream, my path to success.
+          </p>
+        </div>
+        <div class="goal">
+          <h3>Lift My Family Out of Poverty 🏡</h3>
+          <p>
+            Everything I do is not just for myself but for my family. I want to
+            be the reason they no longer have to struggle, the reason they can
+            sleep peacefully without worrying about finances. I want to give
+            them a better life, one where they can enjoy the things they
+            deserve. Security, Comfort and happiness. Lifting my family out of
+            poverty is not just a goal. it’s my mission.
+          </p>
+        </div>
+        <div class="goal">
+          <h3>Create a Strong and Prosperous Family Life 👨‍👩‍👧</h3>
+          <p>
+            I don’t just want to survive. I want to thrive. When the time comes
+            for me to build my own family, I want to provide them with a life
+            of stability, love, and security. I want to be financially
+            independent,emotionally ready and capable of giving my future
+            children the opportunities I never had. Stability, for me, means
+            having the freedom to enjoy life without the constant fear of
+            financial struggles.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!---Comment form---->
+    <div class="comment">
+      <h2>Comment Section</h2>
+      <div class="comment-form">
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="comment">Comment:</label>
+          <textarea id="comment" name="comment" required></textarea>
+          <button type="submit" id="submit_button" disabled>Submit</button>
+        </form>
+      </div>
+    </div>
+    <!---Comments of Group Member-->
+    <div id="comment_section">
+      <h2>Comments of Groupmate</h2>
+      <div class="comment-container">
+        <div class="comment-box">
+          <p>
+            Simone is a dedicated and inspiring groupmate. His passion for
+            learning and problem-solving motivates everyone around him. It’s a
+            pleasure working with someone so driven and collaborative!
+          </p>
+          <p class="author">- Daniel Victorioso</p>
+        </div>
+
+        <div class="comment-box">
+          <p>
+            Hardwork and dedication are Simone’s defining qualities. 
+            His strong work ethic, creativity, and teamwork make him a reliable 
+            and valuable presence in any project.
+          </p>
+          <p class="author">- Gerald Mamasalanang</p>
+        </div>
+
+        <div class="comment-box">
+          <p>
+            The way you set ambitious goals and work tirelessly to 
+            achieve them is truly admirable. Your dedication and unwavering 
+            focus are a true inspiration to everyone around you.
+          </p>
+          <p class="author">- Ivan Delumen</p>
+        </div>
+      </div>
+    </div>
+
     <!--Testimonial-->
     <div id="testimonial_section">
       <h2>Testimonial</h2>
@@ -229,10 +320,10 @@
           <h3>Let's Connect</h3>
           <div class="connect-icons">
             <a href="https://github.com/reyes-simonejake">
-              <img src="./images/github-brands.svg" alt="" />
+              <img src="./images/github-brands.svg" alt="github" />
             </a>
             <a href="https://www.linkedin.com/in/simone-jake-reyes-75199234a/">
-              <img src="./images/linkedin-brands.svg" alt="" />
+              <img src="./images/linkedin-brands.svg" alt="linkedin" />
             </a>
           </div>
         </div>
@@ -249,5 +340,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

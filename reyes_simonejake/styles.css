@@ -9,7 +9,7 @@
 }
 
 body {
-  background: transparent;
+  background: transparent;;
 }
 /*Navbar Section*/
 .nav-bar {
@@ -65,7 +65,7 @@ li a:hover {
   left: 10px;
   top: 0;
 }
-
+/*--------Style for Home Section-------------*/
 #home_section {
   display: flex;
   flex-direction: column;
@@ -113,6 +113,11 @@ h2 {
   font-family: var(--font-secondary);
   margin-top: 10px;
   margin-bottom: 5px;
+}
+
+h2 span {
+  display: block;
+  line-height: 1.2; /* Adjust as needed for spacing */
 }
 
 p {
@@ -444,11 +449,215 @@ p {
 .contact-form button:hover {
   background: #ff4757;
 }
+/*Goals Section*/
+.goals-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: var(--primary-bg);
+  text-align: center;
+}
 
+.goals-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.goal-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.goal {
+  background: var(--primary-bg);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 200px;
+  max-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goal h3 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.goal p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  text-align: left;
+  margin: 0;
+}
+/*Comment Section*/
+.comment {
+  background: var(--primary-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  margin: 40px auto;
+  transition: transform 0.3s ease;
+}
+
+.comment h2 {
+  font-family: var(--font-primary);
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.comment-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-form label {
+  width: 100%;
+  max-width: 500px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align: left;
+  color: var(--text-primary);
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid var(--text-primary);
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 15px;
+  background: var(--primary-bg);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.comment-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.comment-form button {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  background: #007bff;
+  color: var(--secondary-bg);
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+#comment_section {
+  text-align: center;
+  padding: 20px;
+}
+
+.comment-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; 
+}
+
+.comment-box {
+  background: var(--primary-bg);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
 /* Mobile Small */
 @media (max-width: 320px) {
   /* Nav Section */
+  .nav-bar {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: var(--secondary-bg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  /* The checkbox hack - when checked, display menu */
+  .nav-toggle:checked ~ .nav-links {
+    max-height: 500px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle:checked ~ .nav-links {
+    display: block;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
   li a {
+    display: block;
     padding: 10px;
     font-size: 14px;
   }
@@ -663,6 +872,56 @@ p {
   .contact-form button {
     padding: 10px;
   }
+  /*Goals Section*/
+  .goal-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .goal {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 15px;
+  }
+  
+  .goals-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+  
+  .goal h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .goal p {
+    font-size: 0.9rem;
+  }
+
+  .comment {
+    padding: 20px 15px;
+    width: 95%;
+  }
+  
+  .comment h2 {
+    font-size: 20px;
+  }
+  
+  .comment-form input,
+  .comment-form textarea,
+  .comment-form button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .comment-form textarea {
+    min-height: 100px;
+  }
+
+  .comment-container {
+    flex-direction: column;
+  }
 }
 
 /* Mobile Medium */
@@ -693,7 +952,6 @@ p {
     max-height: 500px;
   }
 
-  /* Hide the regular nav by default in mobile */
   .nav-links {
     display: none;
   }
@@ -905,6 +1163,40 @@ p {
 
   .contact-form h2 {
     font-size: 26px;
+  }
+
+  /*Goals Section*/
+  .goal-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .goal {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  .goals-section h2 {
+    font-size: 2rem;
+  }
+  
+  .goal h3 {
+    font-size: 1.3rem;
+  }
+  
+  .comment {
+    padding: 22px 18px;
+    width: 95%;
+  }
+  
+  .comment h2 {
+    font-size: 22px;
+  }
+
+  .comment-container {
+    flex-direction: column;
   }
 }
 
@@ -1129,4 +1421,516 @@ p {
   .contact-form h2 {
     font-size: 28px;
   }
+  /*Goals Section*/
+  .goal-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+  
+  .goal {
+    width: 100%;
+    max-width: 100%;
+    padding: 22px;
+  }
+  
+  .comment {
+    padding: 25px 20px;
+    width: 92%;
+  }
+
+  .comment-container {
+    flex-direction: column;
+  }
 }
+
+/* Tablet */
+@media (min-width: 426px) and (max-width: 768px) {
+    /* Nav Section */
+  .nav-bar {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: var(--secondary-bg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    display: none;
+  }
+
+  .nav-toggle:checked ~ .nav-links {
+    max-height: 500px;
+    display: block;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  li a {
+    display: block;
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  /* Home Section */
+  #home_section {
+    padding-top: 70px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .name-header img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .name-header h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .button {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn-light,
+  .btn-black {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+
+  /* Interest Section */
+  #interest_section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .list-interest {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .interest {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .interest h3 {
+    font-size: 20px;
+  }
+
+  .interest p {
+    font-size: 14px;
+  }
+
+  /* Works Section */
+  #works_section {
+    padding: 30px 20px;
+  }
+
+  .works-contrainer h2 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+
+  .my-works {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .skills {
+    max-width: 100%;
+  }
+
+  .skills a {
+    height: 100px;
+  }
+
+  .skills img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .skills h2 {
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+
+  /* Testimonial Section */
+  #testimonial_section {
+    padding: 40px 20px;
+  }
+
+  #testimonial_section h2 {
+    font-size: 32px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  .testimonial-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .message-box {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .message-box p {
+    font-size: 15px;
+  }
+
+  /* Gallery Section */
+  #gallery_section {
+    padding: 30px 0;
+  }
+
+  #gallery_section h2 {
+    font-size: 32px;
+    margin-top: 30px;
+  }
+
+  .image-container {
+    padding: 15px 0;
+    width: 100%;
+    max-width: 425px;
+  }
+
+  .gallery-images {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .gallery-images img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    padding: 0;
+    border-radius: 8px;
+  }
+
+  /* Contact Section */
+  #contact_section {
+    width: 100%;
+    margin: 40px auto;
+    padding: 40px 25px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-info h2 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    padding: 25px;
+    max-width: 100%;
+  }
+
+  .contact-form h2 {
+    font-size: 28px;
+  }
+
+  /*Goals Section*/
+    .goal-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .goal {
+    width: 100%;
+    max-width: 90%;
+    padding: 25px;
+  }
+  
+  .comment-form input,
+  .comment-form textarea,
+  .comment-form button {
+    max-width: 450px;
+  }
+
+  .comment-container {
+    flex-direction: column;
+  }
+}
+
+ @media (min-width: 769px) and (max-width: 1024px) {
+      /* Nav Section */
+  .nav-bar {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: var(--secondary-bg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    display: none;
+  }
+
+  .nav-toggle:checked ~ .nav-links {
+    max-height: 500px;
+    display: block;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  li a {
+    display: block;
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  /* Home Section */
+  #home_section {
+    padding-top: 70px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .name-header img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .name-header h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .button {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn-light,
+  .btn-black {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+
+  /* Interest Section */
+  #interest_section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .list-interest {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .interest {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .interest h3 {
+    font-size: 20px;
+  }
+
+  .interest p {
+    font-size: 14px;
+  }
+
+  /* Works Section */
+  #works_section {
+    padding: 30px 20px;
+  }
+
+  .works-contrainer h2 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+
+  .my-works {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .skills {
+    max-width: 100%;
+  }
+
+  .skills a {
+    height: 100px;
+  }
+
+  .skills img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .skills h2 {
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+
+  /* Testimonial Section */
+  #testimonial_section {
+    padding: 40px 20px;
+  }
+
+  #testimonial_section h2 {
+    font-size: 32px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  .testimonial-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .message-box {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .message-box p {
+    font-size: 15px;
+  }
+
+  /* Gallery Section */
+  #gallery_section {
+    padding: 30px 0;
+  }
+
+  #gallery_section h2 {
+    font-size: 32px;
+    margin-top: 30px;
+  }
+
+  .image-container {
+    padding: 15px 0;
+    width: 100%;
+    max-width: 425px;
+  }
+
+  .gallery-images {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .gallery-images img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    padding: 0;
+    border-radius: 8px;
+  }
+
+  /* Contact Section */
+  #contact_section {
+    width: 100%;
+    margin: 40px auto;
+    padding: 40px 25px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-info h2 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    padding: 25px;
+    max-width: 100%;
+  }
+
+  .contact-form h2 {
+    font-size: 28px;
+  }
+
+  /*Goals Section*/
+    .goal-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .goal {
+    width: 100%;
+    max-width: 90%;
+    padding: 25px;
+  }
+  
+  .comment-form input,
+  .comment-form textarea,
+  .comment-form button {
+    max-width: 450px;
+  }
+
+  .comment-container {
+    flex-direction: column;
+  }
+ }
