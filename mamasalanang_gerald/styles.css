@@ -448,6 +448,59 @@ button[type="submit"]:active {
   box-shadow: 0 3px 8px rgba(209, 58, 189, 0.4);
 }
 
+/* Goal Teammates Comments Section */
+.existing-comments {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px dashed #ccc;
+}
+
+.existing-comments h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.teammate-comment {
+  background-image: linear-gradient(135deg, #eebd89, #d13abd);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.teammate-comment:hover {
+  transform: translateY(-10px);
+}
+
+.teammate-comment p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.teammate-comment p::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: -5px;
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: Georgia, serif;
+}
+
+.teammate-comment span {
+  display: block;
+  text-align: right;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+}
+
 /* Footer */
 .footer {
   background-color: #333;
@@ -535,6 +588,27 @@ button[type="submit"]:active {
     padding: 10px 20px;
     font-size: 14px;
   }
+
+  .existing-comments h3 {
+    font-size: 1.2rem;
+  }
+
+  .teammate-comment {
+    padding: 18px 12px;
+  }
+
+  .teammate-comment p {
+    font-size: 0.85rem;
+  }
+
+  .teammate-comment p::before {
+    font-size: 35px;
+    top: -15px;
+  }
+
+  .teammate-comment span {
+    font-size: 0.8rem;
+  }
 }
 
 /* Mobile M */
@@ -607,6 +681,23 @@ button[type="submit"]:active {
   button[type="submit"] {
     padding: 12px 22px;
     font-size: 15px;
+  }
+
+  .existing-comments h3 {
+    font-size: 1.3rem;
+  }
+
+  .teammate-comment {
+    padding: 20px 15px;
+  }
+
+  .teammate-comment p {
+    font-size: 0.9rem;
+  }
+
+  .teammate-comment p::before {
+    font-size: 40px;
+    top: -15px;
   }
 }
 
@@ -681,6 +772,23 @@ button[type="submit"]:active {
     padding: 12px 25px;
     font-size: 16px;
   }
+
+  .existing-comments h3 {
+    font-size: 1.4rem;
+  }
+
+  .teammate-comment {
+    padding: 22px 18px;
+  }
+
+  .teammate-comment p {
+    font-size: 0.95rem;
+  }
+
+  .teammate-comment p::before {
+    font-size: 45px;
+    top: -18px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -717,6 +825,31 @@ button[type="submit"]:active {
 
   .goals-container {
     grid-template-columns: 1fr;
+  }
+
+  .existing-comments h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .teammate-comment {
+    padding: 18px 15px;
+    margin-bottom: 15px;
+  }
+
+  .teammate-comment p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .teammate-comment p::before {
+    font-size: 40px;
+    top: -15px;
+    left: -3px;
+  }
+
+  .teammate-comment span {
+    font-size: 0.85rem;
   }
 }
 
@@ -757,5 +890,29 @@ button[type="submit"]:active {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+  }
+
+  .existing-comments {
+    padding-top: 25px;
+    margin-top: 30px;
+  }
+
+  .existing-comments h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .teammate-comment {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .teammate-comment p {
+    font-size: 0.95rem;
+  }
+
+  .teammate-comment p::before {
+    font-size: 50px;
+    top: -18px;
   }
 }
